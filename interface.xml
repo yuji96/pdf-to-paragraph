@@ -1,6 +1,8 @@
 <View>
-  <Repeater on="$images" indexFlag="{{idx}}" mode="pagination">
-    <View style="height: 70vh; display: flex; align-items: start; gap: 8px; flex-direction: row;">
+  <!-- `mode="pagination` は annotation 更新時にバグる -->
+  <Repeater on="$images" indexFlag="{{idx}}">
+    <View
+      style="margin-bottom: 2rem; display: flex; align-items: start; gap: 8px; flex-direction: row;">
       <Image name="image-{{idx}}" value="$images[{{idx}}]" />
       <RectangleLabels name="labels-{{idx}}" toName="image-{{idx}}" showInline="false">
         <Label value="title" background="#FFA39E" />

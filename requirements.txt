@@ -1,0 +1,3 @@
+label-studio
+pdf2image
+pdfminer.six

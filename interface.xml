@@ -7,12 +7,13 @@
       <RectangleLabels name="labels-{{idx}}" toName="image-{{idx}}" showInline="false">
         <Label value="title" background="#FFA39E" />
         <Label value="authors" background="#D4380D" />
-        <Label value="affiliation" background="#FFC069" />
-        <Label value="section" background="#995200" />
-        <Label value="subsection" background="#D3F261" />
+        <Label value="X section" background="#995200" />
+        <Label value="X.X subsection" background="#D3F261" />
+        <Label value="X.X.X subsubsection" background="#D3F261" />
         <Label value="heading" background="#389E0D" />
         <Label value="text" background="#5CDBD3" />
         <Label value="other" background="#a1a1a1" />
+        <Label value="none" background="#d1d1d1"/>
       </RectangleLabels>
     </View>
   </Repeater>

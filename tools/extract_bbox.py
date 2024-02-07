@@ -1,5 +1,4 @@
 import sys
-from pathlib import Path
 from typing import Iterator
 
 import numpy as np
@@ -18,10 +17,12 @@ def parse_page(container) -> Iterator[LTTextContainer]:
 def extract_textbox(pdf_path, width=None, height=None, y_reverse=True):
     for page in extract_pages(pdf_path, laparams=LAParams(all_texts=True)):
         if width is None:
-            x_scale = y_scale = 1
-        else:
-            x_scale = width / page.width
-            y_scale = height / page.height
+            width = page.width
+        if height is None:
+            height = page.height
+        x_scale = width / page.width
+        y_scale = height / page.height
+
         texts = []
         bboxes = []
         for textbox in parse_page(page):
@@ -31,7 +32,7 @@ def extract_textbox(pdf_path, width=None, height=None, y_reverse=True):
         if y_reverse:
             bboxes[:, [1, 3]] = height - bboxes[:, [3, 1]]
         bboxes = bboxes.astype(int)
-        yield texts, bboxes
+        yield (texts, bboxes), width, height
 
 
 if __name__ == "__main__":

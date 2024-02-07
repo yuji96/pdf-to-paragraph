@@ -38,6 +38,6 @@ https://labelstud.io/guide/storage#Local-storage
 
 ## 参考
 
+- hotkey は `interface.xml` で `<Label hotkey="1" value="X section" background="#995200" />` とすれば指定できる
 - task (json) の定義: https://labelstud.io/guide/task_format#Relevant-JSON-property-descriptions
-- import pre-annotation: https://labelstud.io/guide/predictions
 - zoom の挙動が逆 (open issue): https://github.com/HumanSignal/label-studio-frontend/issues/135

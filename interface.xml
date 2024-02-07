@@ -1,0 +1,17 @@
+<View>
+  <Repeater on="$images" indexFlag="{{idx}}" mode="pagination">
+    <View style="height: 70vh; display: flex; align-items: start; gap: 8px; flex-direction: row;">
+      <Image name="image-{{idx}}" value="$images[{{idx}}]" />
+      <RectangleLabels name="labels-{{idx}}" toName="image-{{idx}}" showInline="false">
+        <Label value="title" background="#FFA39E" />
+        <Label value="authors" background="#D4380D" />
+        <Label value="affiliation" background="#FFC069" />
+        <Label value="section" background="#995200" />
+        <Label value="subsection" background="#D3F261" />
+        <Label value="heading" background="#389E0D" />
+        <Label value="text" background="#5CDBD3" />
+        <Label value="other" background="#a1a1a1" />
+      </RectangleLabels>
+    </View>
+  </Repeater>
+</View>

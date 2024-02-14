@@ -67,4 +67,5 @@ filter: .*json
 
 - hotkey は `interface.xml` で `<Label hotkey="1" value="X section" background="#995200" />` とすれば指定できる。
 - task (json) の定義: https://labelstud.io/guide/task_format#Relevant-JSON-property-descriptions
-- zoom の挙動が逆 (open issue): https://github.com/HumanSignal/label-studio-frontend/issues/135
+- zoom の挙動が逆 (未解決): https://github.com/HumanSignal/label-studio-frontend/issues/135
+- ctrl+click で複数選択できるようでできない (未解決): https://github.com/HumanSignal/label-studio-frontend/issues/604
